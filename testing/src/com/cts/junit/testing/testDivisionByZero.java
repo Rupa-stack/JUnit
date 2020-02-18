@@ -6,7 +6,8 @@ import org.junit.Test;
 
 public class testDivisionByZero {
 
-	@Test(expected=java.lang.ArithmeticException.class)
+	@Test(expected=java.lang.ArithmeticException.class, timeout=100)
+	//test fails if test case runs beyond 100ms
 	//ArithmeticException arises only for int type
 	public void test() {
 		Division obj= new Division();
